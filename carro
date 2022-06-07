@@ -1,0 +1,46 @@
+package Atividade9;
+//BIBLIOTECAS UTILIZADAS
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+
+public class fila {
+    ArrayList<carro> carros = new ArrayList<>(); //PUXANDO DADOS CARRO
+
+    void insere(carro a){  //PRIMEIRO CARRO
+      this.carros.add(a); //ADICIONANDO
+    }
+  
+    carro remove(){
+      return this.carros.remove(0); //REMOVENDO CARRO
+    }
+  
+    boolean isEmpty(){  //RETORNANDO VAZIO
+      return (this.carros.isEmpty());
+    }
+  
+    int tamanho(){ //OBTENDO O N ELEMENTO DA LISTA
+      return carros.size();
+    }
+  
+    void listar(){ //LISTA DOS CARROS
+      for (int i = 0; i < carros.size() ; i++) {
+        this.carros.get(i).getCar();
+       }
+    }
+  
+    void ordenar(){ //ORDENANDO OS CARROS
+      ordenaCarro(carros);
+    }
+  
+    private static void ordenaCarro(ArrayList<carro> lista) {
+      Collections.sort(lista, new Comparator<carro>() {
+          @Override
+          public int compare(carro o1, carro o2) { //COMPARAÇÃO DE CARRO 1 COM CARRO 2
+              return o1.placa.compareTo(o2.placa);
+          }
+       
+    }
+   );
+ }
+}
