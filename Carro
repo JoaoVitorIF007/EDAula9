@@ -1,0 +1,27 @@
+package Atividade9;
+
+public class carro {
+    
+    String placa;
+    String proprietario;
+    String cor;
+    //APÓS DEFINIÇÃO DE TIPO ITEMOS PUXAR DADOS UTILIZANDO THIS
+    public carro(String placa, String proprietario, String cor){
+      this.placa = placa;
+      this.proprietario = proprietario;
+      this.cor = cor;
+    }
+
+    public carro(){};
+
+    //PEDINDO INFORMAÇÕES DO CARRO CLIENTE
+    public void getCar(){
+      System.out.println("Placa do carro: : "+ this.placa);
+      System.out.println("Proprietario: "+ this.proprietario);
+      System.out.println("Cor:"+ this.cor);
+    }
+//RETORNAR PLACA
+    public String getplaca(){
+      return this.placa; 
+    }
+}
